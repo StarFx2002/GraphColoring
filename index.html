@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Coloring Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Graph Coloring</h1>
+            <form id="graphColoringForm">
+                <div class="inputs">
+                    <div class="form-group">
+                        <label for="nodes">Input number of nodes</label>
+                        <input type="number" id="nodes" name="nodes" min="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Number of colors</label>
+                        <input type="number" id="color" name="color" min="1" required>
+                    </div>
+                </div>
+                <div class="titleConnect">
+                    <label for="connectivity">Select connectivity</label>
+                    <div> <input type="checkbox" id="selectAll">Select All<br> </div>
+                </div>
+                <div class="form-group">
+                    <div class="connectivity" id="connectivity">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit">OK</button>
+                </div>
+            </form>
+        </div>
+        <div class="right-section">
+            <div class="result">
+                <h2>Result</h2>
+                <div class="graph" id="graph">
+                </div>
+                <div class="comparison">
+                    <label for="timeComparison">Time Complexity Comparison</label>
+                    <div class="timeComplexity">
+                        <div>
+                            <h4>BackTrack : </h4>
+                            <h4 id="backtracking"></h4>
+                        </div>
+                        <div>
+                            <h4>BruteForce : </h4>
+                            <h4 id="bruteforce"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
